@@ -4,9 +4,12 @@ function setup() {
   Alpine.store('model', {
     currentPage: 'home', // 'home', 'service'
     currentLanguage: 'english',
-    dialNumber: '1003',
+    dialNumber: 'dtobar@collabmcr.com',
+    dialNumber2: '1003',
     dialNumber3: 'dtobar@cisco.com',
     services: [],
+    services2: [],
+    services3: [],
 
     init() {
       const params = new URLSearchParams(location.search);
