@@ -4,7 +4,8 @@ function setup() {
   Alpine.store('model', {
     currentPage: 'home', // 'home', 'service'
     currentLanguage: 'english',
-    dialNumber: 'erica.talking@ivr.vc',
+    dialNumber: '1003',
+    dialNumber3: 'dtobar@cisco.com',
     services: [],
 
     init() {
@@ -14,8 +15,12 @@ function setup() {
       }
       this.services = [
         { url: this.dialNumber, name: 'Loan' },
-        { url: this.dialNumber, name: 'Advice' },
-        { url: this.dialNumber, name: 'Credit' },
+      ],
+      this.services2 = [
+        { url: this.dialNumber2, name: 'Advice' },
+      ],
+      this.services3 = [
+        { url: this.dialNumber3, name: 'Credit' },
       ];
     },
     get page() {
