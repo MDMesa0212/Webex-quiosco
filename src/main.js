@@ -4,12 +4,8 @@ function setup() {
   Alpine.store('model', {
     currentPage: 'home', // 'home', 'service'
     currentLanguage: 'english',
-    dialNumber: 'dtobar@collabmcr.com',
-    dialNumber2: '1003',
-    dialNumber3: 'dtobar@cisco.com',
+    dialNumber: 'erica.talking@ivr.vc',
     services: [],
-    prueba: [],
-    services_2: [],
 
     init() {
       const params = new URLSearchParams(location.search);
@@ -17,13 +13,9 @@ function setup() {
         this.dialNumber = params.get('number');
       }
       this.services = [
-        { url: this.dialNumber, name: 'Soporte-Técnico' },
-      ],
-      this.prueba = [
-        { url: this.dialNumber2, name: 'Soporte-Académico' },
-      ],
-      this.services_2 = [
-        { url: this.dialNumber3, name: 'Soporte-Financiación' },
+        { url: this.dialNumber, name: 'Loan' },
+        { url: this.dialNumber, name: 'Advice' },
+        { url: this.dialNumber, name: 'Credit' },
       ];
     },
     get page() {
