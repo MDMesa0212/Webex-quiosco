@@ -13,7 +13,7 @@
 </head>
 <body
   x-cloak
-  x-data="{ page, services, language, languages } = $store.model"
+  x-data="{ page, services, services2, services3, language, languages } = $store.model"
 >
   <div class="home-screen" x-show="page === 'home'">
     <h1>Webex Bank</h1>
@@ -33,9 +33,21 @@
   </div>
 
   <div class="service" x-show="page === 'service'">
-    <h2>Choose Your Service</h2>
+    <h2>Elige tu servicio</h2>
     <div class="row">
       <template x-for="service in services">
+        <a class="service" x-bind:href="'sip:'+ service.url" :class="service.name">
+          <div class="avatar"></div>
+          <label x-text="service.name"></label>
+        </a>
+      </template>
+      <template x-for="service in <services2">
+        <a class="service" x-bind:href="'tel:'+ service.url" :class="service.name">
+          <div class="avatar"></div>
+          <label x-text="service.name"></label>
+        </a>
+      </template>
+      <template x-for="service in services3>
         <a class="service" x-bind:href="'sip:'+ service.url" :class="service.name">
           <div class="avatar"></div>
           <label x-text="service.name"></label>
