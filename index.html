@@ -13,10 +13,14 @@
 </head>
 <body
   x-cloak
-  x-data="{ page, services, services2, services3, language, languages } = $store.model"
+  x-data="{ page, services, services_2, services_3, language, languages } = $store.model"
 >
+<a href="https://www.cisco.com/site/us/en/index.html">
+  <img class="ciscologo" src="assets/images/ciscologo.png" alt="">
+</a>
+
   <div class="home-screen" x-show="page === 'home'">
-    <h1>Webex Bank</h1>
+    <h1>kiosk</h1>
 
     <h2 @click="page = 'service'" class="touch-to-start">Touch to start</h2>
 
@@ -33,7 +37,7 @@
   </div>
 
   <div class="service" x-show="page === 'service'">
-    <h2>Elige tu servicio</h2>
+    <h2>Choose your service</h2>
     <div class="row">
       <template x-for="service in services">
         <a class="service" x-bind:href="'sip:'+ service.url" :class="service.name">
